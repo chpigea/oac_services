@@ -5,9 +5,13 @@ In "/etc/systemd/system" ceate the *.service files.
 For example using "nano":
 
 > sudo nano /etc/systemd/system/oac_gateway.service
+
 > sudo nano /etc/systemd/system/oac_register.service
+
 > sudo nano /etc/systemd/system/oac_backend.service
+
 > sudo nano /etc/systemd/system/oac_frontend.service
+
 > sudo nano /etc/systemd/system/oac_target.service
 
 ## Enable the services
