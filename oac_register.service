@@ -1,0 +1,14 @@
+[Unit]
+Description=OAC Register Service
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=/percorso/assoluto/oac_register
+ExecStart=/usr/bin/npm start
+Restart=always
+Environment=NODE_ENV=production
+
+[Install]
+WantedBy=multi-user.target
+

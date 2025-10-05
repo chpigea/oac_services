@@ -1,0 +1,14 @@
+[Unit]
+Description=OAC Backend Service
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=/percorso/assoluto/oac_backend
+ExecStart=/usr/bin/npm run dev
+Restart=always
+Environment=NODE_ENV=development
+
+[Install]
+WantedBy=multi-user.target
+
