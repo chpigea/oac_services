@@ -4,10 +4,10 @@ After=network.target
 
 [Service]
 Type=simple
-WorkingDirectory=/percorso/assoluto/oac_frontend
-ExecStart=/usr/bin/npm run dev
+EnvironmentFile=/home/server-di-test-maddaluno/oac-development.env
+WorkingDirectory=/tmp
+ExecStart=/bin/bash -c 'source ${NVM_SHELL} && oac_frontend'
 Restart=always
-Environment=NODE_ENV=development
 
 [Install]
 WantedBy=multi-user.target

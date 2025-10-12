@@ -4,10 +4,10 @@ After=network.target
 
 [Service]
 Type=simple
-WorkingDirectory=/percorso/assoluto/oac_register
-ExecStart=/usr/bin/npm start
+EnvironmentFile=/home/server-di-test-maddaluno/oac-development.env
+WorkingDirectory=/tmp
+ExecStart=/bin/bash -c 'source ${NVM_SHELL} && oac_register'
 Restart=always
-Environment=NODE_ENV=production
 
 [Install]
 WantedBy=multi-user.target

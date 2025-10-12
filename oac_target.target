@@ -3,4 +3,6 @@ Description=OAC Application Stack
 Requires=oac_backend.service oac_register.service oac_gateway.service oac_frontend.service
 After=network.target
 
+[Install]
+WantedBy=multi-user.target
 

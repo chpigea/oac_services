@@ -42,6 +42,11 @@ Change the password (eg @postgres#)
 sudo apt install xsltproc
 ```
 
+## Install ngnix
+```
+sudo apt install nginx -y
+```
+
 ## Create the file service
 
 In "/etc/systemd/system" ceate the *.service files.
@@ -57,7 +62,7 @@ sudo nano /etc/systemd/system/oac_backend.service
 
 sudo nano /etc/systemd/system/oac_frontend.service
 
-sudo nano /etc/systemd/system/oac_target.service
+sudo nano /etc/systemd/system/oac_target.target
 ```
 
 ## Enable the services
@@ -81,6 +86,11 @@ sudo systemctl stop oac_target
 ### Get status of the service
 ```
 sudo systemctl status oac_target
+```
+
+### Get list dependencies
+```
+sudo systemctl list-dependencies oac_target.target
 ```
 
 ### Get the log in real-time
